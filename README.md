@@ -8,6 +8,8 @@ Projeto de conversor de moedas (Real -> BitCoin, Dólar Americano, Euro e Libra 
 - <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3-logo" height="25px" width="60px">
 - <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript-logo" height="25px" width="60px">
 
+<a href="https://money-convert-devclub.netlify.app/"> Clique aqui e teste você mesmo </a>
+
 Modelo no Desktop:
 
 <br>
