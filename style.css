@@ -9,28 +9,27 @@
 }
 
 body{
-    background-color: #8A51FC;
+    background-color: #8ba6ac;
 }
 
 
-.gif-top{
-    width: 150px;
-    margin: 10px auto;
-    display: block;
-}
+/* .gif-top{
+    height: 100%;
+    width: 100%;
+} */
 
 main{
     width: 375px;
     height: 580px;
-    background: #F4F4F4;
+    background: #d7d7b8;
     border-radius: 20px;
-    margin: 0 auto;
+    margin: 2% auto;
     padding: 20px 24px 23px;
 }
 
 label{
     font-size: 14px;
-    color: #777777;
+    color: #000000;
     }
     
 .initial-coin{
@@ -44,6 +43,7 @@ label{
     padding-left: 18px;
     margin: 5px 0px;
     cursor: pointer;
+    background: #f8f8ec
 }
 
 .ended-coin{
@@ -57,6 +57,7 @@ label{
     padding-left: 18px;
     margin: 5px 0px;
     cursor: pointer;
+    background: #f8f8ec
 }
 
 .input-main{
@@ -68,6 +69,7 @@ label{
     font-weight: 700;
     padding-left: 18px;
     margin: 5px 0px;
+    background: #f8f8ec
 }
 
 input::placeholder{
@@ -79,13 +81,13 @@ button{
     width: 327px;
     height: 48px;
     border-radius: 5px;
-    background-color: #772FD3;
-    border: 1px solid #772FD3;
-    color: #FFFFFF;
+    background-color: #8ba6ac;
+    border: 1px solid #8ba6ac;
+    color: #000000;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    margin: 5px;
+    margin: 5px 0;
 }
 
 button:hover{
@@ -100,12 +102,13 @@ button:active{
     width: 327px;
     height: 250px;
     border-radius: 20px;
-    border: 1px solid #772FD3;
+    border: 1px solid #8ba6ac;
     margin-top: 3px;
+    background: #f8f8ec;
 }
 
 .to-convert{
-    margin: 2px auto;
+    margin: 5px auto 0;
     display: block;
 }
 
@@ -113,18 +116,19 @@ button:active{
 .currency, .currency-converted{
     font-weight: 400;
     font-size: 14px;
-    color: #777777;
+    color: #000000;
     text-align: center;
 }
 
 .currency-value, .currency-value-result{
     font-weight: 700;
     font-size: 14px;
-    color: #555555;
+    color: #000000;
     text-align: center;
 }
 
 .seta{
+    height: 50px;
     margin: 6px auto;
     display: block;
 }
