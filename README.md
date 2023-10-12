@@ -1,14 +1,14 @@
 <h1 align=center> MONEY CONVERT </h1>
 
-Projeto de conversor de moedas (Real -> BitCoin, Dólar Americano, Euro e Libra Esterlina), utilizando as linguagens abaixo.
+Neste projeto, desenvolvi um conversor de moeda, que realiza a conversão de real para dolar, euro, libra ou bitcoin. As linguagens nas quais utilizei para desenvolver foram:
 
 <br>
 
-- <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5-logo" height="25px" width="60px">
-- <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3-logo" height="25px" width="60px">
-- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript-logo" height="25px" width="60px">
+- <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5-logo" height="25px" width="80px">
+- <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3-logo" height="25px" width="80px">
+- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript-logo" height="25px" width="80px">
 
-<a href="https://money-convert-devclub.netlify.app/"> Clique aqui e teste você mesmo </a>
+<a href="https://wesleytmarques.github.io/MONEY-CONVERT/"> Clique aqui e teste você mesmo </a>
 
 Modelo no Desktop:
 
