@@ -12,12 +12,6 @@ body{
     background-color: #8ba6ac;
 }
 
-
-/* .gif-top{
-    height: 100%;
-    width: 100%;
-} */
-
 main{
     width: 375px;
     height: 580px;
@@ -136,4 +130,11 @@ button:active{
 .converted{
     margin: 2px auto;
     display: block;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    main{
+        margin: 35% auto;
+    }
+    
 }
