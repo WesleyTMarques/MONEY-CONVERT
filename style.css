@@ -132,9 +132,9 @@ button:active{
     display: block;
 }
 
-@media screen and (min-width: 411px) and (max-width: 768px) {
+@media screen and (min-width: 41px) and (max-width: 768px) {
     main{
-        margin: 35% auto;
+        margin: 20% auto;
     }
     
 }
