@@ -2,11 +2,30 @@ const convertButton = document.querySelector(".main-button")
 const currencySelectorInitial = document.querySelector(".initial-coin")
 const currencySelectorFinal = document.querySelector(".ended-coin")
 
-function convertValues() { //função para a troca dos formatos das moedas
+async function convertValues() { //função para a troca dos formatos das moedas
     const inputCurrencyValue = document.querySelector(".input-main").value
     const currencyValueToConvert = document.querySelector(".currency-value")
     const currencyValueConverted = document.querySelector(".currency-value-result")
     const inputPlaceHolder = document.querySelector(".input-main")
+
+
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,EUR-USD,GBP-USD,BTC-USD,BRL-USD,BRL-EUR,USD-EUR,GBP-EUR,BTC-EUR,USD-GBP,BRL-GBP,EUR-GBP").then(response => response.json())
+
+    const coin = [{name:"USD-BRL", value:data.USDBRL.high},
+    {name:"EUR-BRL", value:data.EURBRL.high},
+    {name:"BTC-BRL", value:data.BTCBRL.high},
+    {name:"GBP-BRL", value:data.GBPBRL.high},
+    {name:"EUR-USD", value:data.EURUSD.high},
+    {name:"GBP-USD", value:data.GBPUSD.high},
+    {name:"BTC-USD", value:data.BTCUSD.high},
+    {name:"BRL-USD", value:data.BRLUSD.high},
+    {name:"BRL-EUR", value:data.BRLEUR.high},
+    {name:"USD-EUR", value:data.USDEUR.high},
+    {name:"GBP-EUR", value:data.GBPEUR.high},
+    {name:"BTC-EUR", value:data.BTCEUR.high},
+    {name:"USD-GBP", value:data.USDGBP.high},
+    {name:"BRL-GBP", value:data.BRLGBP.high},
+    {name:"EUR-GBP", value:data.EURGBP.high}]
 
     //trocar o formato da moeda inical
     switch (currencySelectorInitial.value) {
@@ -37,19 +56,19 @@ function convertValues() { //função para a troca dos formatos das moedas
 
         switch (currencySelectorFinal.value) {
             case "dolar":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue / 5.05)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue * coin[7].value)
                 break;
 
             case "bitcoin":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue / 136627.15)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue / coin[2].value)
                 break;
 
             case "euro":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue / 5.31)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue * coin[8].value)
                 break;
 
             case "libra":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue / 6.13)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue * coin[13].value)
                 break;
 
             case "real":
@@ -69,19 +88,19 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
                 break;
 
             case "bitcoin":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue * 0.000037)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue * coin[6].value)
                 break;
 
             case "euro":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue * 0.95)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue * coin[9].value)
                 break;
 
             case "libra":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue * 0.82)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue * coin[12].value)
                 break;
 
             case "real":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * 5.05)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * coin[0].value)
                 break;
 
             default:
@@ -91,7 +110,7 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
 
         switch (currencySelectorFinal.value) {
             case "dolar":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue * 27005.50)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue * coin[6].value)
                 break;
 
             case "bitcoin":
@@ -100,15 +119,15 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
                 break;
 
             case "euro":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue * 25683.58)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue * coin[11].value)
                 break;
 
             case "libra":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue * 22254.23)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue * 41074.21)
                 break;
 
             case "real":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * 136447.89)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * coin[2].value)
                 break;
 
             default:
@@ -118,11 +137,11 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
 
         switch (currencySelectorFinal.value) {
             case "dolar":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue * 1.05)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue * coin[4].value)
                 break;
 
             case "bitcoin":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue * 0.000039)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue / coin[11].value)
                 break;
 
             case "euro":
@@ -131,11 +150,11 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
                 break;
 
             case "libra":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue * 0.87)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "GBP" }).format(inputCurrencyValue * coin[14].value)
                 break;
 
             case "real":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * 5.31)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * coin[1].value)
                 break;
 
             default:
@@ -145,15 +164,15 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
 
         switch (currencySelectorFinal.value) {
             case "dolar":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue * 1.21)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputCurrencyValue * coin[5].value)
                 break;
 
             case "bitcoin":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue * 0.000045)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue * 0.000024346180285169243)
                 break;
 
             case "euro":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue * 1.15)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputCurrencyValue * coin[10].value)
                 break;
 
             case "libra":
@@ -162,7 +181,7 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
                 break;
 
             case "real":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * 6.13)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue * coin[3].value)
                 break;
 
             default:
