@@ -88,7 +88,7 @@ TROQUE UMA DAS MOEDAS PARA CONVERTER.`)
                 break;
 
             case "bitcoin":
-                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue * coin[6].value)
+                currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { style: "currency", currency: "BTC" }).format(inputCurrencyValue / coin[6].value)
                 break;
 
             case "euro":
